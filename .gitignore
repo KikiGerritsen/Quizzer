@@ -1,0 +1,15 @@
+# Compiled Browserify files #
+#############################
+
+
+# Personal stuff            #
+#############################
+kiki
+
+# libs                      #
+#############################
+node_modules
+
+# os specific files         #
+#############################
+.DS_Store

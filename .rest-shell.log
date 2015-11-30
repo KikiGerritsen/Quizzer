@@ -1,0 +1,688 @@
+10:53:34.505 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+11:10:09.059 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:8080/localhost:9888/api/quiz using null
+11:10:09.089 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+11:10:44.299 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:11:13.308 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz%20%7B'password'%20:%20'han1234'%7D using null
+11:26:17.890 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+11:26:29.746 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:26:37.127 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/ using null
+11:26:54.663 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:27:48.410 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz%20%7Bpassword%20:%20han1234%7D using null
+11:30:08.119 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/ using {password=han1234}
+11:30:20.271 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=han1234}
+11:30:24.209 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:31:18.342 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+11:31:18.349 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+11:31:28.428 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:31:28.430 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+11:37:35.283 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:37:42.691 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+11:40:43.064 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kikienlen using null
+11:40:50.007 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/ using null
+11:48:23.350 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+11:48:23.392 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server)
+org.springframework.web.client.ResourceAccessException: I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.post(HttpCommands.java:212) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:792) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+11:49:19.379 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+11:49:35.362 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+11:50:32.664 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:50:39.984 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+11:50:51.488 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+11:50:51.513 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server)
+org.springframework.web.client.ResourceAccessException: I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.post(HttpCommands.java:212) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:792) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+11:52:25.133 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+11:57:48.917 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+11:57:58.901 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:58:03.827 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+12:00:11.841 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=len&kiek}
+12:00:15.128 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+12:02:29.638 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/bla using null
+12:03:29.981 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/bla using null
+12:07:55.995 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=kiekenator&lenbeard}
+12:08:15.851 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team using null
+12:08:32.987 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/len&kiek using null
+12:08:33.000 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:781) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 13 common frames omitted
+12:09:07.755 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team using {password=han1234, teamname=kaas}
+12:09:35.771 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:09:35.793 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:781) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 13 common frames omitted
+12:11:21.164 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:11:39.178 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team using null
+12:11:49.289 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:11:49.302 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:781) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 13 common frames omitted
+12:12:19.568 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:15:31.908 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:15:40.487 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+12:16:25.052 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/kaas using null
+12:16:34.989 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:17:04.775 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:17:35.521 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:17:58.758 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+12:29:02.102 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+13:19:18.530 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+13:34:47.163 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/questions/humor/han1234 using null
+13:34:47.202 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:781) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+13:35:40.726 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+13:36:02.842 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234/team/kaas using null
+13:36:18.530 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/category/humor using null
+13:36:18.536 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+13:40:23.833 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+13:41:48.644 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+14:04:10.263 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:04:32.463 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+14:04:47.313 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+14:04:54.525 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:05:02.798 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+14:07:27.920 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:07:35.990 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/notexcisting using null
+09:02:27.274 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+09:03:01.475 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+09:08:03.603 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=han1234}
+09:08:11.102 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+09:12:14.440 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/han1234 using null
+09:38:34.653 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+09:45:18.615 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=kiki}
+09:46:09.165 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=team1}
+10:41:50.437 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:43:02.747 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:47:46.378 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:49:22.574 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:51:13.713 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:58:47.053 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:02:18.719 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:54:16.081 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:55:35.705 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:56:10.288 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:56:33.328 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+11:57:26.644 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=team1}
+11:57:33.260 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=team1}
+11:58:15.213 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:09:35.312 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:20:09.368 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:33:43.714 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:55:23.793 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz using {score=1, teamname=lenkiek}
+12:56:07.594 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+12:58:27.226 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/team/quiz using {teamname=lenkiek}
+13:01:38.956 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz/lenkiek using {score=1}
+13:17:15.637 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:17:27.341 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz/lenkiek using {score=1}
+13:17:27.377 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server)
+org.springframework.web.client.ResourceAccessException: I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.put(HttpCommands.java:261) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:792) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+13:18:17.776 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz/lenkiek using {score=1}
+10:05:37.482 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+10:06:35.571 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+10:44:36.755 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=quiz}
+12:57:53.300 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:57:53.309 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.get(HttpCommands.java:152) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+12:58:49.691 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+12:59:52.968 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:01:44.433 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:03:34.020 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:03:40.291 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=quiz}
+13:03:48.169 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:06:01.541 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz/master using {password=quiz}
+13:06:36.052 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:06:47.187 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+13:07:44.545 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:08:08.755 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+13:09:44.705 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+13:10:04.037 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/quiz/master using {password=quiz}
+13:10:26.251 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:11:40.511 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+13:11:54.999 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:12:29.821 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:12:54.342 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:13:01.532 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:13:03.189 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:13:04.111 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:13:05.181 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:15:25.784 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:15:53.453 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+13:15:58.774 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+14:48:26.749 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:49:25.301 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending PUT to http://localhost:9888/api/quiz/master using {password=quiz}
+14:49:25.334 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server)
+org.springframework.web.client.ResourceAccessException: I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.put(HttpCommands.java:261) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:792) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+14:51:08.361 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:51:29.119 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=quiz}
+14:57:27.676 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+14:57:32.643 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/quiz using null
+14:58:37.609 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz/quiz using null
+16:06:00.067 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+16:06:10.610 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=quiz}
+16:07:48.607 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:9888/api/quiz using {password=quiz}
+16:07:54.525 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:9888/api/quiz using null
+20:02:41.519 [main] DEBUG o.s.d.r.s.commands.ContextCommands - Cleared context variables...
+20:03:01.284 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:03:44.085 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/ using null
+20:05:44.057 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/ using null
+20:05:45.874 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/ using null
+20:05:49.304 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:08:14.213 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:09:12.509 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:10:05.862 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:10:49.812 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/ using null
+20:11:07.124 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+20:30:51.846 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:33:33.097 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:34:18.303 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:39:01.035 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:39:01.046 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused)
+org.springframework.web.client.ResourceAccessException: I/O error: Connection refused; nested exception is java.net.ConnectException: Connection refused
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.post(HttpCommands.java:212) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:998) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:73) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:46) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:49) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:446) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+20:39:47.497 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:40:36.321 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:41:31.327 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:41:31.382 [Spring Shell] WARN  o.s.d.r.shell.commands.HttpCommands - Client encountered an error. Retrying. (I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server)
+org.springframework.web.client.ResourceAccessException: I/O error: Unexpected end of file from server; nested exception is java.net.SocketException: Unexpected end of file from server
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:461) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:423) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands.execute(HttpCommands.java:332) [rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.data.rest.shell.commands.HttpCommands.post(HttpCommands.java:212) [rest-shell-1.2.1.RELEASE.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_60]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_60]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:191) [spring-core-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.shell.core.SimpleExecutionStrategy.invoke(SimpleExecutionStrategy.java:64) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.SimpleExecutionStrategy.execute(SimpleExecutionStrategy.java:57) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.AbstractShell.executeCommand(AbstractShell.java:223) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.promptLoop(JLineShell.java:484) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at org.springframework.shell.core.JLineShell.run(JLineShell.java:158) [spring-shell-1.0.1.BUILD-SNAPSHOT.jar:1.0.1.BUILD-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:792) ~[na:1.8.0_60]
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:647) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1535) ~[na:1.8.0_60]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440) ~[na:1.8.0_60]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_60]
+	at org.springframework.http.client.SimpleClientHttpResponse.getRawStatusCode(SimpleClientHttpResponse.java:47) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpResponse.getStatusCode(AbstractClientHttpResponse.java:32) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	at org.springframework.data.rest.shell.commands.HttpCommands$2.hasError(HttpCommands.java:317) ~[rest-shell-1.2.1.RELEASE.jar:na]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:447) ~[spring-web-3.1.3.RELEASE.jar:3.1.3.RELEASE]
+	... 14 common frames omitted
+20:41:51.142 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz}
+20:42:05.293 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending POST to http://localhost:3000/api/quiz using {password=quiz2}
+21:27:12.374 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz/quiz using null
+10:36:25.472 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz/quiz using null
+10:36:33.567 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
+10:41:18.387 [Spring Shell] INFO  o.s.d.r.shell.commands.HttpCommands - Sending GET to http://localhost:3000/api/quiz using null
